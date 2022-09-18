@@ -84,5 +84,53 @@ const bicycle = {
 bicycle.setGear(3);
 
 
+//Use class Syntax to Define a Constructor Function
+
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+
+//Use getters and setters to Control Access to an Object
+
+class Thermostat {
+    constructor(temp) {
+        this._temp = 5 / 9 * (temp - 32);
+    }
+    // getter
+    get temperature() {
+        return this._temp;
+    }
+    // setter
+    set temperature(value) {
+        this._temp = value;
+    }
+}
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;// вызов setter
+temp = thermos.temperature; // 26 in Celsius...чтение после setter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
