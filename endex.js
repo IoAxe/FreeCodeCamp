@@ -61,7 +61,6 @@ function makeList(arr) {
 const failuresList = makeList(result.failure);
 
 //Write Concise Object Literal Declarations Using Object Property Shorthand
-
 const createPerson = (name, age, gender) => {
 
     return {
@@ -73,7 +72,6 @@ const createPerson = (name, age, gender) => {
 };
 
 //Write Concise Declarative Functions with ES6
-
 const bicycle = {
     gear: 2,
     setGear(newGear) {
@@ -85,7 +83,6 @@ bicycle.setGear(3);
 
 
 //Use class Syntax to Define a Constructor Function
-
 class Vegetable {
     constructor(name) {
         this.name = name;
@@ -96,7 +93,6 @@ const carrot = new Vegetable('carrot');
 console.log(carrot.name);
 
 //Use getters and setters to Control Access to an Object
-
 class Thermostat {
     constructor(temp) {
         this._temp = 5 / 9 * (temp - 32);
@@ -117,11 +113,26 @@ thermos.temperature = 26;// вызов setter
 temp = thermos.temperature; // 26 in Celsius...чтение после setter
 
 
+//Complete a Promise with resolve and reject
+const makeServerRequest = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+
+makeServerRequest.then(result => {
+    console.log(result)
+})
 
 
-
-
-
+makeServerRequest.catch(error => {
+    console.log(error);
+});
 
 
 
