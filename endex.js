@@ -147,11 +147,11 @@ let waldoRegex = /Waldo/; // Change this line
 
 //Match a Literal String with Different Possibilities
 let petString = "James has a pet cat.";
-let petRegex = /dog|cat|bird|fish/; // Change this line
+//let petRegex = /dog|cat|bird|fish/; // Change this line
 //let result = petRegex.test(petString);
 
 //Ignore Case While Matching
-let myString = "freeCodeCamp";
+//let myString = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 //let result = fccRegex.test(myString);
 
@@ -175,8 +175,41 @@ let quoteSample = "Beware of bugs in the above code; I have only proved it corre
 let vowelRegex = /[aeiou]/gi; // Change this line
 //let result = quoteSample.match(vowelRegex); // Change this line
 
+//Match All Numbers
+//let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+//let result = movieName.match(numRegex).length;
 
+//Match All Non - Numbers
+//let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+//let result = movieName.match(noNumRegex).length;
 
+//Restrict Possible Usernames
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([0-9][0-9]|[a-z]+\d*)$/i; // Change this line
+//let result = userCheck.test(username);
+
+//Match Whitespace
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+//let result = sample.match(countWhiteSpace);
+
+//Check for All or None
+let favWord = "favorite";
+let favRegex = /favou?rite/i; // Change this line
+//let result = favRegex.test(favWord);
+
+//Positive and Negative Lookahead
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\D+\d{2})/; // Change this line
+//let result = pwRegex.test(sampleWord);
+
+//Check For Mixed Grouping of Characters
+//let myString = "Eleanor Roosevelt";
+//let myRegex = /(Eleanor|Franklin D.)\sRoosevelt/; // Change this line
+//let result = myRegex.test(myString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
 
 
 
