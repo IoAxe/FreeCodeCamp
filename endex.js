@@ -211,6 +211,23 @@ let pwRegex = /(?=\w{5,})(?=\D+\d{2})/; // Change this line
 //let result = myRegex.test(myString); // Change this line
 // After passing the challenge experiment with myString and see how the grouping works
 
+//Reuse Patterns Using Capture Groups
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)(\s)\1\2\1$/; // Change this line
+//let result = reRegex.test(repeatNum);
+
+//Use Capture Groups to Search and Replace
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+//let result = str.replace(fixRegex, replaceText);
+
+//Remove Whitespace from Start and End
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+//let result = hello.replace(wsRegex, ""); // Change this line
+
+
 
 
 
